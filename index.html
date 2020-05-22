@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Population graph app</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js'></script>
+    <script defer src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+    <script defer src='./myChart.js'></script>
+</head>
+
+<body>
+    <div class='content'>
+        <h1>Population graphs</h1>
+
+        <p>Enter three letter <a href="https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes" target="_blank">country
+                code</a></p>
+        <input class='textinput' placeholder='Country' type='text' id='country' maxlength='3' />
+        <p>
+            <button class='button' onclick="show()" type="button" id='renderBtn'>Render population graph</button>
+        </p>
+
+        <p class='para' id='para'></p>
+
+<div class='countrydetails'>
+    <div class='columnleft' id='flagcontainer'></div>
+    <div class='columnright'>
+        <p id='countryName'></p>
+        <p id='region'></p>
+        <p id='capital'></p>
+    </div>
+    
+</div>
+        <div class='container' id='myContainer'>
+            <canvas id='myChart'></canvas>
+        </div>
+    </div>
+
+<footer>
+    <p>Author: Annina Waldén</p>
+    <p>Based on the Population graphs app <a
+            href="https://github.com/mikkokotola/populationgraphs/blob/master/LICENSE">(MIT)</a></p>
+    <p>Population data: World Bank <a href="https://creativecommons.org/licenses/by/4.0/">(CC-BY-4.0)</a></p>
+</footer>
+</body>
+</html>
